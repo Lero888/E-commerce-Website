@@ -1,0 +1,556 @@
+
+/* ============================================== Self defined ===================================================== */
+
+* {
+
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+.notransition .button {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+  }
+
+  .error {
+
+    color: #ff0000;
+    background-color: #FFD2D2;
+    padding-left: 1em;
+  }
+  
+/*============================================== header Footer   ===================================================== */
+
+.body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-bottom: 110px;
+    min-width: 100vw;
+
+}
+
+.navbar .navbar-expand-md .navbar-light .shadow-sm {
+
+    padding: 40px 60px !important;
+    overflow: visible;
+}
+
+.navbar-custom { 
+    background-color: #F0EBD9;
+} 
+
+a {
+
+    text-decoration: none;
+    color: #000;
+}
+
+#overlay {
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+}
+#start-free {
+
+    margin-left: 20px;
+    background-color: #008060;
+    color: #ffffff;
+}
+
+#start-free button:hover {
+
+    background-color: #044b39;
+    transition: none;
+}
+
+#button-create {
+
+    background-color: #027055 !important;
+}
+
+/* Footer */
+.fa {
+
+    color: #ffffff !important;
+}
+
+
+.page-footer {
+
+    color: #ffffff;
+    background-color: rgb(16, 53, 16);
+    /* position: fixed; */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+
+}
+
+#footer-first-line {
+
+    margin: 15px 10px;
+    margin-bottom: 0;
+}
+
+#footer-first-line a:hover {
+
+    text-decoration: underline;
+}
+
+#footer-first {
+    margin: 15px 0;
+}
+
+.page-footer a {
+    color: #cccccc;
+}
+
+.page-footer a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.page-footer h5 {
+
+    font-size: 0.9em;
+}
+
+.page-footer hr {
+
+    color: #ffffff;
+    
+}
+
+#icon {
+
+    margin: 0 0;
+    font-size: large;
+}
+
+#last {
+
+    padding: 5px 20px;
+}
+
+/*============================================== Login ===================================================== */
+
+#login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+#login-container .col-md-12 {
+
+    min-width: 30vw;
+}
+
+#login-container .row {
+
+    line-height: 5px;
+    margin-bottom: 4px;
+}
+
+#login-container .special {
+    min-width: 30vw;
+    margin-bottom: -26px !important;
+}
+
+#login-container #logo {
+
+    height: 50px;
+    width: 50px;
+}
+
+#login-container #con {
+
+    color: #808080;
+}
+
+#login-container #forgot {
+    text-decoration: none;
+    color: #6f7bcb;  
+    margin-bottom: 10px; 
+}
+
+#login-container #start {
+
+    color: #6f7bcb;
+
+}
+#login-container .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #6f7bcb !important;
+    padding: 10px 20px !important;
+    font-weight: 700 !important;
+    transition: none;
+}
+
+#login-container #store_name {
+    margin-top: 20px;
+}
+
+#footer-text {
+
+    padding: 0 10px;
+    text-decoration: none;
+    color: #000;
+}
+
+#footer-col {
+    text-align: right;
+}
+
+#login-footer-footer {
+
+    position: fixed;
+    bottom: 0px;
+    margin-bottom: 15px;
+    
+}
+
+#login-footer-footer a:hover {
+
+    color: #6f7dcb;
+}
+
+#login-footer {
+    padding: 20px;
+}
+
+#err-msg {
+
+    color: #ff0000;
+}
+
+/*============================================== Main Page ===================================================== */
+#home-container {
+
+    margin: 0 auto;
+    padding: 0 auto;
+    min-height: 100vh;
+}
+
+#one {
+
+    background-color: #F0EBD9;
+    padding: 60px;
+    padding-left: 50px;
+    font-weight: 800;
+    font-size: 2.7em;
+    color:   rgb(16, 53, 16);
+
+  }
+
+#two {
+    padding: 80px;
+    background-color: rgb(16, 53, 16);
+    color: #ffffff;
+}
+
+#four {
+
+    background-color: #ffffff;
+    padding-bottom: 100px;
+    padding-top: 80px;
+}
+
+#two a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+#two a:hover {
+    color: rgb(219, 207, 207);
+    text-underline-position: none;
+}
+
+#one #email-main {
+
+    margin-top: 17px;
+}
+
+#btn-start, #btn-next {
+
+    color: #ffffff;
+    background-color: #008060 !important;
+}
+
+#small-note {
+    font-size: 0.4em;
+    line-height: 0;
+}
+
+@media(max-width: 700px) {
+
+#woman-write {
+    visibility: hidden;
+}
+
+}
+
+@media(max-width: 900px) {
+
+    #woman-write {
+        visibility: show;
+        width: 350px;
+        height: auto;
+    }
+
+}
+
+#website {
+
+    padding-top: 20px;
+    font-weight: 700;
+}
+
+#icon-2 {
+
+    margin-bottom: 20px;
+    color: #15e0ae;
+}
+
+#btn-top {
+
+    background-color: #008060;
+    color: #ffffff;
+}
+
+/*============================================== Free Trial ===================================================== */
+#free-body {
+
+    height: 100%;
+    background-color: #000639 !important;  
+     
+}
+
+
+#free-body .navbar {
+
+    padding: 20px 40px !important;
+}
+
+#free-body .container {
+
+    padding-top: 70px;
+}
+
+#free-body form {
+    background-color: #f4f6f8;
+    padding: 35px;
+    justify-content: center;
+}
+
+#free-body .form-group {
+
+    margin: 30px 0;
+    
+}
+
+#free-body form h1 {
+
+    text-align: center;
+}
+
+#free-body form p  {
+
+    text-align: center;
+}
+
+#free-body .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #6f7bcb !important;
+    margin-top: 20px; 
+    font-weight: 700 !important;
+    transition: none !important;
+}
+
+
+#free-body #img {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+#free-body img {
+
+    max-width: 80%;
+}
+
+/*============================================== Account Setup ===================================================== */
+#setupForm {
+
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 50px;
+    margin-bottom: 50px; */
+}
+
+#setupForm form {
+
+    padding: 50px 50px;
+    background-color: #ffffff;
+    width: 60vw;
+}
+
+#setupForm h2 {
+
+    font-weight: 700;
+}
+
+#step {
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: #808080;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+}
+
+#setupForm .active {
+  opacity: 1;
+}
+
+#setupForm #skipBtn {
+
+    color: #5c6ac4;
+    border-style: solid;
+    border: 1px #5c6ac4;
+}
+#setupForm #form2 {
+
+    display:none;
+}
+
+/*============================================== Home ===================================================== */
+#home-nav {
+
+    background-color: #1C2260;
+    top: 0;    
+    /* position: fixed; */
+    /* background-color: #43467F;; */
+} 
+
+#top-nav .nav-item a {
+    color: #ffffff;
+}
+
+#home-nav .dropdown-item {
+    color: #000 !important;
+}
+#search {
+
+    display: flex;
+    min-width: 80%;
+    background-color: #dcdcdc;    
+    opacity: 30%;
+    /* position: absolute; */
+    
+}
+
+#search ::-webkit-input-placeholder { /* Edge */
+    color: red;
+}
+
+#search :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: red;
+}
+
+#search ::placeholder {
+    color: red !important;
+    opacity: 1;
+}
+.sidenav {
+    height:100%;
+    width: 260px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+    margin-top: 78px;
+    background-color:  #f8f8f8;;
+    padding-left: 15px;   
+    border-right: 1em #000; 
+  }
+
+.sidenav .fa {
+
+    color: #a8a8a8 !important;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #000;;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #1C2260;
+    background-color: #f0f0f0;
+}
+
+.sidenav {
+
+    list-style-type: none;
+}
+
+
+.sidenav .dropdown-toggle:after {
+    display: none;
+}
+
+.main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+@media screen and (max-width: 700px) {
+
+    .sidenav{
+        display: none;
+    }
+}
+
+.collapsible-body {
+    display: none;
+}
+
+.turnRed {
+
+   background-color: #ff0000;
+}
+
+#home-content {
+
+    margin-top: 50px;
+    margin-left: 260px;
+}
