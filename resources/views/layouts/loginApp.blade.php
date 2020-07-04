@@ -1,37 +1,25 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Shopify - Login</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
-        <!-- Styles -->
-        <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css">
-        <link href="{{ asset('css/custom.css') }}" rel="stylesheet" type="text/css">
-
-        <!-- Tab Icon  -->
-        <link rel="icon" href="{{URL('/images/logo.svg')}}">
+        
+        @include('inc.universalHeader')
 
     </head>
     <body id="login-body">
         <div class="container">
-            @if (Route::has('login'))
+            {{-- @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
                     @else
-                        {{-- <a href="{{ route('login') }}">Login</a> --}}
+                        <a href="{{ route('login') }}">Login</a>
 
                         @if (Route::has('register'))
-                            {{-- <a href="{{ route('register') }}">Register</a> --}}
+                            <a href="{{ route('register') }}">Register</a>
                         @endif
                     @endauth
                 </div>
-            @endif
+            @endif --}}
 
             <main class="">
                 @yield('content')

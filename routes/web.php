@@ -35,8 +35,9 @@ Auth::routes(); // register, login...
 // $this->post('password/reset', 'Auth\ResetPasswordController@reset');
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/account-setup', 'PageController@accountSetup')->name('accountSetup');
+Route::get('/account-setup', 'HomeController@accountSetup')->name('accountSetup');
 Route::get('/main-page', 'PageController@mainPage');
+Route::get('/your-store', 'HomeController@yourStore');
 
 
 

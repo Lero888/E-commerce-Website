@@ -64,6 +64,8 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        session()->put('storeName',$data['store_name']);
+
         return Shop::create([
 
             'email' => $data['email'],

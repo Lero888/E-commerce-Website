@@ -17,7 +17,9 @@
   
                        </div>
                        <div class="col-md-5">
-                          <button id="btn-next"type="button" class="btn btn-primary notransition" v-on:click="openForm">Start free trial</button>
+                          {{-- <button id="btn-next"type="button" class="btn btn-primary notransition" v-on:click="openForm">Start free trial</button> --}}
+                          <button id="btn-next"type="button" class="btn btn-primary notransition" onClick="location.href='/register'">Start free trial</button>
+
                        </div>
                  </div>
   
@@ -138,7 +140,8 @@
   
            <div class="row">
               <div class="col-md-12  text-center py-3">
-                 <button id="btn-start" type="button" class="btn btn-primary notransition" v-on:click="openForm">Start free trial</button>           
+                 {{-- <button id="btn-start" type="button" class="btn btn-primary notransition" onClick="location.href='/register'" v-on:click="openForm">Start free trial</button>            --}}
+                 <button id="btn-start" type="button" class="btn btn-primary notransition" onClick="location.href='/register'">Start free trial</button>           
               </div>
            </div>
   

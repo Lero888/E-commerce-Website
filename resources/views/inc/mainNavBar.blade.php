@@ -10,7 +10,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active dropdown">
+                <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Start <span class="sr-only">(current)</span>
                     </a>
@@ -81,7 +81,9 @@
                     </div>
                 </li>
                 <li><a class="nav-item nav-link" href="/login">Log in</a></li>
-                <button id="start-free" class="btn btn-outline-success my-2 my-sm-0" v-on:click="openForm">&nbsp;Start free trial</button>
+                {{-- <button id="start-free" class="btn btn-outline-success my-2 my-sm-0" v-on:click="openForm">&nbsp;Start free trial</button> --}}
+                <button id="start-free" class="btn btn-outline-success my-2 my-sm-0" onClick="location.href='/register'">Start free trial</button>
+
             </ul>
         </div>
     </div>

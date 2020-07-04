@@ -2259,9 +2259,23 @@ __webpack_require__.r(__webpack_exports__);
         return true;
       }
 
-      console.log('almost end'); // cancels the event if it is cancelable
+      console.log('Checked'); // cancels the event if it is cancelable
 
-      e.preventDefault();
+      e.preventDefault(); // if (this.loaded) {
+      //     this.loaded = false;
+      //     this.success = false;
+      //     this.errors = {};
+      //     axios.post('/register', this.fields).then(response => {
+      //     this.fields = {}; //Clear input fields.
+      //     this.loaded = true;
+      //     this.success = true;
+      // }).catch(error => {
+      //     this.loaded = true;
+      //     if (error.response.status === 422) {
+      //         this.errors = error.response.data.errors || {};
+      //     }
+      // });
+      // }
     },
     // Validate email with regex
     validEmail: function validEmail(email) {
@@ -39534,115 +39548,127 @@ var render = function() {
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "modal-body p-4" }, [
-          _c("form", { attrs: { action: "register", method: "POST" } }, [
-            _c("div", { staticClass: "form-group" }, [
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.email,
-                    expression: "email"
-                  }
-                ],
-                staticClass: "form-control",
-                attrs: {
-                  type: "text",
-                  name: "email",
-                  id: "email",
-                  placeholder: "Email Address"
-                },
-                domProps: { value: _vm.email },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.email = $event.target.value
-                  }
+          _c(
+            "form",
+            {
+              attrs: { method: "post", action: "register" },
+              on: {
+                submit: function($event) {
+                  $event.preventDefault()
+                  return _vm.submitForm($event)
                 }
-              }),
-              _vm._v(" "),
-              _c("div", { staticClass: "error" }, [
-                _vm._v(_vm._s(this.errors.email))
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "form-group" }, [
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.password,
-                    expression: "password"
-                  }
-                ],
-                staticClass: "form-control",
-                attrs: {
-                  type: "password",
-                  name: "password",
-                  id: "password",
-                  placeholder: "Password"
-                },
-                domProps: { value: _vm.password },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
+              }
+            },
+            [
+              _c("div", { staticClass: "form-group" }, [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.email,
+                      expression: "email"
                     }
-                    _vm.password = $event.target.value
-                  }
-                }
-              }),
-              _vm._v(" "),
-              _c("div", { staticClass: "error" }, [
-                _vm._v(_vm._s(this.errors.password))
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "form-group" }, [
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.store_name,
-                    expression: "store_name"
-                  }
-                ],
-                staticClass: "form-control",
-                attrs: {
-                  type: "text",
-                  name: "store_name",
-                  id: "store_name",
-                  placeholder: "Your store name"
-                },
-                domProps: { value: _vm.store_name },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
+                  ],
+                  staticClass: "form-control",
+                  attrs: {
+                    type: "text",
+                    name: "email",
+                    id: "email",
+                    placeholder: "Email Address"
+                  },
+                  domProps: { value: _vm.email },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.email = $event.target.value
                     }
-                    _vm.store_name = $event.target.value
                   }
-                }
-              }),
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "error" }, [
+                  _vm._v(_vm._s(this.errors.email))
+                ])
+              ]),
               _vm._v(" "),
-              _c("div", { staticClass: "error" }, [
-                _vm._v(_vm._s(this.errors.store_name))
-              ])
-            ]),
-            _vm._v(" "),
-            _c("br"),
-            _vm._v(" "),
-            _vm._m(0),
-            _vm._v(" "),
-            _c("input", {
-              attrs: { type: "hidden", name: "_token" },
-              domProps: { value: _vm.csrf }
-            })
-          ])
+              _c("div", { staticClass: "form-group" }, [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.password,
+                      expression: "password"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: {
+                    type: "password",
+                    name: "password",
+                    id: "password",
+                    placeholder: "Password"
+                  },
+                  domProps: { value: _vm.password },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.password = $event.target.value
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "error" }, [
+                  _vm._v(_vm._s(this.errors.password))
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "form-group" }, [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.store_name,
+                      expression: "store_name"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: {
+                    type: "text",
+                    name: "store_name",
+                    id: "store_name",
+                    placeholder: "Your store name"
+                  },
+                  domProps: { value: _vm.store_name },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.store_name = $event.target.value
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "error" }, [
+                  _vm._v(_vm._s(this.errors.store_name))
+                ])
+              ]),
+              _vm._v(" "),
+              _c("br"),
+              _vm._v(" "),
+              _vm._m(0),
+              _vm._v(" "),
+              _c("input", {
+                attrs: { type: "hidden", name: "_token" },
+                domProps: { value: _vm.csrf }
+              })
+            ]
+          )
         ])
       ])
     ])

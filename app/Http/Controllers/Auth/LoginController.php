@@ -7,6 +7,8 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 use \Illuminate\Http\Request;
+use Session;
+use Auth;
 
 class LoginController extends Controller
 {
@@ -22,6 +24,7 @@ class LoginController extends Controller
     */
 
     use AuthenticatesUsers;
+
 
     /**
      * Where to redirect users after login.
@@ -83,6 +86,8 @@ class LoginController extends Controller
         // config --> auth.php
         if(auth()->attempt(array('store_name' => $input['storeName'], 'password' => $input['password'], 'email' => $input['email'])))
         {
+            // session()->put('storeInfo',$this);
+            session()->put('storeName',$input['storeName']);
             return redirect()->route('home');
         }else{
             return redirect()->route('login')
@@ -93,8 +98,16 @@ class LoginController extends Controller
 
     protected function loggedOut(Request $request) {
 
+        Session::flush();
+        Auth::logout();
+        
         return redirect('/main-page');
-        // session clear
+    }
+
+
+    protected function authenticated(Request $request, $shop)
+    {
+        $this->setUserSession($shop);
     }
 
 }

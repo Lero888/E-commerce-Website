@@ -14,6 +14,10 @@ class HomeController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        // $this->middleware('auth', ['only' => 'home']);
+        // $this->middleware('auth', ['except' => 'home']);
+
+
     }
 
     /**
@@ -24,5 +28,17 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+    }
+
+    public function accountSetup() {
+
+        $title = "Shopify";
+        return view('account-setup') -> with('title', $title);
+    }
+
+
+    public function yourStore() {
+
+        return view('your-store');
     }
 }

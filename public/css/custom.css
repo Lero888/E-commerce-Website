@@ -18,14 +18,14 @@ html {
     transition: none !important;
   }
 
-  .error {
+.error {
 
-    color: #ff0000;
-    background-color: #FFD2D2;
-    padding-left: 1em;
-  }
+color: #ff0000;
+background-color: #FFD2D2;
+padding-left: 1em;
+}
   
-/*============================================== header Footer   ===================================================== */
+/*============================================== Main header Footer   ===================================================== */
 
 .body {
     overflow-y: scroll;
@@ -540,17 +540,84 @@ a {
     }
 }
 
-.collapsible-body {
-    display: none;
+.collapsible {
+    
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
 }
 
-.turnRed {
+.active, .collapsible:hover {
+  background-color: #ccc;
+}
 
-   background-color: #ff0000;
+.collapsible-body {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #202e78;
 }
 
 #home-content {
 
     margin-top: 50px;
     margin-left: 260px;
+}
+
+/*============================================== Your Store ===================================================== */
+.store .navbar {
+
+    padding: 20px 60px;
+    
+}
+
+.store .nav-link {
+
+    font-size: 1.8em !important;
+}
+
+
+.store #image-overlay{
+
+    width: 100vw;
+}
+
+.store .first-img {
+
+    min-width: 100vw;
+}
+
+.store #earth {
+
+    max-width: 545px;
+    max-height: 545px;
+}
+
+.store #one {
+    padding: 100px;
+    background-color: #ffffff;
+}
+
+
+.store #two {
+    padding: 100px;
+    background-color: #ffffff;
+    min-width: 100vw;
+}
+
+.store #two #earth {
+    padding: 100px;
+    max-width: 300;
+    max-height: 300;
+}
+
+.store p {
+
+    font-size: 0.5em;
+    font-weight: 500;    
 }

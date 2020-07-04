@@ -11,8 +11,8 @@
                 </div>
 
                 <div class="modal-body p-4">
-                        <!-- <form v-on:submit.prevent="submitForm" method="post" action='register'> -->
-                        <form action="register" method="POST">
+                        <form v-on:submit.prevent="submitForm" method="post" action='register'>
+                        <!-- <form action="register" method="POST"> -->
                         
                             <div class="form-group">
                                 <input type="text" name="email" id="email" class="form-control" v-model="email" placeholder="Email Address">
@@ -101,9 +101,30 @@ export default {
                 return true;
             }
 
-            console.log('almost end');
+            console.log('Checked');
             // cancels the event if it is cancelable
             e.preventDefault();
+
+            // if (this.loaded) {
+
+            //     this.loaded = false;
+            //     this.success = false;
+            //     this.errors = {};
+
+            //     axios.post('/register', this.fields).then(response => {
+            //     this.fields = {}; //Clear input fields.
+            //     this.loaded = true;
+            //     this.success = true;
+
+            // }).catch(error => {
+            //     this.loaded = true;
+                
+            //     if (error.response.status === 422) {
+            //         this.errors = error.response.data.errors || {};
+            //     }
+            // });
+            
+            // }
 
 
         },

@@ -18,7 +18,12 @@
 
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  USERNAME
+                    @if(session()->has('storeName'))
+                        {{session()->get('storeName')}}
+                    @else 
+                        Store Name
+                    @endif
+
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="#"><i class="far fa-user-circle"></i> Your Account</a>
@@ -70,7 +75,7 @@
             <a href="#"><i class="far fa-user"></i> Customers</a>
 
             <li>
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="collapse" aria-haspopup="true" aria-expanded="false">
+                <a class="collapsible" href="#" id="navbarDropdown" role="button" data-toggle="collapse" aria-haspopup="true" aria-expanded="false">
                     <i class="fas fa-chart-bar"></i> Analytics
                 </a>
                 <div class="collapsible-body" v-bind:class="{turnRed: showItem}" v-on:click="showNavItem" aria-labelledby="navbarDropdown">
@@ -93,9 +98,26 @@
 
             <a href="#"><i class="fas fa-tags"></i> Discounts</a>
             <a href="#"><i class="far fa-smile"></i> Apps</a>
+
             <br><br>
             <a href="#"></i>SALES CHANNEL <i class="fa fa-plus-circle" aria-hidden="true"></i></a>
-            <a href="#"><i class="fa fa-shopping-bag" aria-hidden="true"></i> Online Store</a>
+            <a href="/your-store"><i class="fas fa-eye"></i> Your store</a>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-shopping-bag" aria-hidden="true"></i> Online Store
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Themes</a>
+                    <a class="dropdown-item" href="#">Blog posts</a>
+                    <a class="dropdown-item" href="#">Pages</a>
+                    <a class="dropdown-item" href="#">Navigation</a>
+                    <a class="dropdown-item" href="#">Domains</a>
+                    <a class="dropdown-item" href="#">Preferences</a>
+
+                </div>
+            </li>
+
 
         </div>
     </div>
